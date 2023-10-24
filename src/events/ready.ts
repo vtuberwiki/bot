@@ -16,9 +16,5 @@ module.exports = {
         webServer(client);
 
         await StartWatching();
-
-        setTimeout(() => {
-            throw new Error('Timeout');
-        }, 6000)
     }
 }
