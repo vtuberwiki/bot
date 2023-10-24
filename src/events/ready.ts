@@ -1,5 +1,6 @@
 import { Events, ActivityType } from "discord.js";
 import webServer from "../wwwroot/server";
+import { StartWatching } from "../core/Watcher";
 
 
 module.exports = {
@@ -13,5 +14,11 @@ module.exports = {
 
         
         webServer(client);
+
+        await StartWatching();
+
+        setTimeout(() => {
+            throw new Error('Timeout');
+        }, 6000)
     }
 }

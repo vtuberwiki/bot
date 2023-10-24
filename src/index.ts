@@ -19,7 +19,7 @@ const client = new Client({
     }
 }) as IClient;
 
-logger.start();
+// logger.start();
 client.commands = new Collection();
 client.messageCommands = new Collection();
 
