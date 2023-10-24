@@ -1,9 +1,7 @@
 import express, { Request, Response, NextFunction } from "express";
 import { createServer } from "http";
 import { Client } from "discord.js";
-import IClient from "../interfaces/IClient";
 import bodyParser from "body-parser";
-import fetch from "node-fetch";
 
 const app = express();
 const server = createServer(app);

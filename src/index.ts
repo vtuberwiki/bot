@@ -1,4 +1,4 @@
-import { Client, Collection, GatewayIntentBits } from "discord.js";
+import { Client, Collection } from "discord.js";
 import config from "./config";
 import dotenv from "dotenv";
 import IClient from "./interfaces/IClient";
@@ -19,7 +19,7 @@ const client = new Client({
     }
 }) as IClient;
 
-// logger.start();
+logger.start();
 client.commands = new Collection();
 client.messageCommands = new Collection();
 
