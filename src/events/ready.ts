@@ -2,7 +2,6 @@ import { Events, ActivityType } from "discord.js";
 import webServer from "../wwwroot/server";
 import { StartWatching } from "../core/Watcher";
 import FileLogger from "../core/fileLogger";
-import { SelfUpdate } from "../services/Github";
 import config from "../config";
 
 
@@ -14,8 +13,8 @@ module.exports = {
             const fileLogger = new FileLogger();
             fileLogger.startLogging();
 
-            await SelfUpdate(true);
         }
+
         console.clear();
         client.user.setActivity({ type: ActivityType.Custom, name: config.startupActivity });
         console.log(`Logged in as ${client.user.tag}`);
