@@ -18,7 +18,7 @@ app.use((req: Request, res: Response, next: NextFunction) => {
 })
 
 export default function webServer(client: Client) {
-    server.listen(process.env.PORT || 8080, () => {
-        console.log(`listening on *:${process.env.PORT || 8080}`);
+    server.listen(8080, "0.0.0.0", () => {
+        console.log("Listening on http://localhost:8080");
     });
 }
