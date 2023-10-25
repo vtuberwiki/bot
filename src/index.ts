@@ -4,7 +4,6 @@ import dotenv from "dotenv";
 import IClient from "./interfaces/IClient";
 import { join } from "path";
 import { readdirSync } from "fs"
-import logger from "./utils/logger";
 
 
 
@@ -27,7 +26,7 @@ const eventsPath = join(__dirname, "events");
 const eventFiles = readdirSync(eventsPath).filter(file => file.endsWith(".js") || file.endsWith(".ts")); /** Allow for DEBUG and PRODUCTION */
 
 const commandFolders = readdirSync(join(__dirname, "commands", 'Interaction'));
-// const messageCommandFolders = readdirSync(join(__dirname, "commands", 'Message'));
+const messageCommandFolders = readdirSync(join(__dirname, "commands", 'Message'));
 
 for (const folder of commandFolders) {
     const commandFiles = readdirSync(join(__dirname, "commands", 'Interaction', folder)).filter(file => file.endsWith(".ts") || file.endsWith(".js"));
@@ -37,13 +36,13 @@ for (const folder of commandFolders) {
     }
 }
 
-// for (const folder of messageCommandFolders) {
-//     const commandFiles = readdirSync(join(__dirname, "commands", 'Message', folder)).filter(file => file.endsWith(".ts") || file.endsWith(".js"));
-//     for (const file of commandFiles) {
-//         const command = require(join(__dirname, "commands", 'Message', folder, file));
-//         client.messageCommands.set(command.command.name, command.command);
-//     }
-// }
+for (const folder of messageCommandFolders) {
+    const commandFiles = readdirSync(join(__dirname, "commands", 'Message', folder)).filter(file => file.endsWith(".ts") || file.endsWith(".js"));
+    for (const file of commandFiles) {
+        const command = require(join(__dirname, "commands", 'Message', folder, file));
+        client.messageCommands.set(command.command.name, command.command);
+    }
+}
 
 
 for (const file of eventFiles) {

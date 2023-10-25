@@ -1,4 +1,4 @@
-import { Events, CommandInteraction, EmbedBuilder, ButtonBuilder, ButtonStyle } from "discord.js";
+import { Events, CommandInteraction } from "discord.js";
 import IClient from "../interfaces/IClient";
 import SupportEmbed from "../utils/SupportEmbed";
 

@@ -12,6 +12,8 @@ interface IActivity {
 interface IConfig {
     StaffPrefix: string;
     github_url: string;
+    GuildId: string;
+    StaffRole: string;
     GreetingChannel: string;
     RulesChannel: string;
     Intents: GatewayIntentBits[];
