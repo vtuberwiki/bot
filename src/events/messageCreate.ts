@@ -21,7 +21,9 @@ module.exports = {
 
         const support = SupportEmbed();
 
-        if (support) {
+        const supportHasEmbed = support.embeds;
+
+        if (supportHasEmbed) {
             //@ts-ignore
             if (NO_MESSAGES.includes(msg.channel?.parentId)) return;
             await msg.channel.send({ ...support });

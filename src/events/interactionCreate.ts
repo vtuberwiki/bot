@@ -21,7 +21,8 @@ module.exports = {
             await command.execute(interaction);
             const support = SupportEmbed();
 
-            if (support) {
+            const supportHasEmbed = support.embeds;
+            if (supportHasEmbed) {
                 await interaction.channel?.send({ ...support });
             }
             console.log(`${interaction.user.tag} used command ${interaction.commandName} in guild ${interaction.guild?.name} (${interaction.guild?.id}) in the channel ${interaction.guild?.channels.cache.get(interaction.channel?.id as string)?.name} (${interaction.channel?.id})`);

@@ -13,5 +13,6 @@ while true; do
     fi
 
     # Sleep for 6 seconds before checking again.
+    
     sleep 6
 done
