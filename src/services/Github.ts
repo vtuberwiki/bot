@@ -4,8 +4,9 @@ export async function SelfUpdate(useTimer?: boolean) {
     console.warn(`Auto-updating VtuberWiki Discord Bot...`);
     async function GodSoHelpme() {
         const { stdout } = await exec('git pull');
+        const out = stdout.toString();
 
-        if (stdout.includes("Already up to date")) {
+        if (out.includes("Already up to date")) {
             console.log(`VtuberWiki Discord Bot is up to date!`);
             return; 
         } else {
