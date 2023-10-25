@@ -11,7 +11,8 @@
     "dev::idle": "ts-node src/index.ts",
     "deploy-commands": "ts-node src/deploy-commands.ts",
     "postinstall": "npm run build",
-    "build": "tsc"
+    "build": "tsc",
+    "server:start": "git pull && npm run build && pm2 start 0"
   },
   "repository": {
     "type": "git",
