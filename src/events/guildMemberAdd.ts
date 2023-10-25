@@ -21,6 +21,6 @@ module.exports = {
 
         await member.roles.add("1166213210660159549");
 
-
+        console.log(`${member.user.tag} joined ${member.guild.name} (${member.guild.id})`);
     }
 }

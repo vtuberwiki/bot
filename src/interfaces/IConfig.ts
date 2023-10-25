@@ -1,4 +1,8 @@
-import { GatewayIntentBits } from "discord.js";
+import { GatewayIntentBits } from 'discord.js';
+
+interface IActivity {
+    name: string;
+}
 
 /**
  * The interface for the config file
@@ -11,6 +15,11 @@ interface IConfig {
     GreetingChannel: string;
     RulesChannel: string;
     Intents: GatewayIntentBits[];
+    startupActivity: string;
+    Activities: IActivity[];
 }
 
-export default IConfig;
+export {
+    IConfig,
+    IActivity
+}
