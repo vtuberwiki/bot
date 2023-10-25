@@ -16,7 +16,6 @@ function GetComputerSpecs() {
 
     function GetCPUs() {
        let cpus = os.cpus();
-       console.log(cpus);
        return cpus.map((cpu) => {
            return cpu.model;
        })
