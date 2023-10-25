@@ -11,7 +11,7 @@ module.exports = {
         const embed = new EmbedBuilder()
             .setColor(0x0099FF)
             .setTitle(`Welcome to the ${member.guild.name}!`)
-            .setDescription(DEFUALT_MESSAGE.replace("%u", `<@${member.id}>`).replace("%guild", `<@${member.guild.id}>`));
+            .setDescription(DEFUALT_MESSAGE.replace("%u", `<@${member.id}>`).replace("%guild", `${member.guild.name}`));
 
         const channel = client.channels.cache.get(config.GreetingChannel) as TextChannel;
 
