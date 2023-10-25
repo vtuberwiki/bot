@@ -108,8 +108,10 @@ export default function webServer(client: Client) {
                             return `<p style="color: green;">${log}</p>`;
                         } else if (log.includes("WARN")) {
                             return `<p style="color: yellow;">${log}</p>`;
-                        } else {
+                        } else if (log.includes("ERROR")) {
                             return `<p style="color: red;">${log}</p>`;
+                        } else {
+                            return `<p>${log}</p>`
                         }
                     }).join("") : "<p>Log not found</p>"
                 }
