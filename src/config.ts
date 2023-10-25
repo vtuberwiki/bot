@@ -16,7 +16,11 @@ const config: IConfig = {
         {
             name: "Make sure to check out the rules!",
         }
-    ] as IActivity[]
+    ] as IActivity[],
+    SupportEmbedChance: {
+        chanceToSend: 10,
+        ranAmount: 300,
+    },
 }
 
 export default config;

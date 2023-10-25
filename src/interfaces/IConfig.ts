@@ -17,6 +17,10 @@ interface IConfig {
     Intents: GatewayIntentBits[];
     startupActivity: string;
     Activities: IActivity[];
+    SupportEmbedChance: {
+        chanceToSend: number;
+        ranAmount: number;
+    }
 }
 
 export {
