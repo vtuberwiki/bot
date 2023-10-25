@@ -1,6 +1,10 @@
 import { EmbedBuilder } from "discord.js";
 import config from "../config";
 
+/**
+ * Support Embed
+ * @returns object
+ */
 export default function SupportEmbed() {
     const random = Math.floor(Math.random() * config.SupportEmbedChance.ranAmount);
 

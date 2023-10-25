@@ -30,6 +30,10 @@ app.use(async (req: Request, res: Response, next: NextFunction) => {
 });
 
 
+/**
+ * Starts the webserver
+ * @param client The discord client
+ */
 export default function webServer(client: Client) {
 
     app.get("/", (req: Request, res: Response) => {
