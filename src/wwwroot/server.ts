@@ -129,7 +129,7 @@ export default function webServer(client: Client) {
     })
 
 
-    server.listen(8080, "0.0.0.0", () => {
-        console.log("Listening on http://localhost:8080");
+    server.listen(6789, "0.0.0.0", () => {
+        console.log("Listening on http://localhost:6789");
     });
 }
